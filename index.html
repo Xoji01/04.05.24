@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Vite App</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+		
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .music-info {
+            margin-right: 20px;
+        }
+
+        .playlist {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .playlist-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .playlist-items {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .playlist-item {
+            padding: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .playlist-item:last-child {
+            border-bottom: none;
+        }
+
+        .playlist-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .controls button {
+			color: black;
+		    border: none;
+            border-radius: 5px;
+            padding: 8px 16px;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        
+		#music-image {
+			height: 300px;
+			width: 300px;
+		}
+		#toggle {
+            border: none;
+			color: black;
+            background: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="music-info">
+            <h2 id="music-title">Title</h2>
+            <img id="music-image" src="" alt="Music Image">
+            <div class="controls">
+                <button id="prev">⏮</button>
+				<button id="toggle">⏸️</button>
+
+                <button id="next">⏭️</button>
+            </div>
+            <audio id="audioPlayer" controls></audio>
+        </div>
+        <div class="playlist">
+            <h2 class="playlist-title">Playlist</h2>
+            <ul class="playlist-items">
+            </ul>
+        </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>
